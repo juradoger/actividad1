@@ -24,9 +24,9 @@ namespace ComputadoraBSS
         {
             return dal.ObtenerCompId(id);
         }
-        public void EditarPersonaBss(Computadora persona)
+        public void EditarComputadoraBss(Computadora computadora)
         {
-            dal.EditarCompDal(persona);
+            dal.EditarCompDal(computadora);
         }
         public void EliminarCompBss(int id)
         {

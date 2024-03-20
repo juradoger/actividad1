@@ -21,7 +21,7 @@ namespace ComputadoraDAL
         }
         public void InsertarComputadoraDal(Computadora computadora)
         {
-            string consulta = "insert into cliente values('" + computadora.idcomputadora + "' ," +
+            string consulta = "insert into computadora values(" +
                                                           "'" + computadora.nombre + "' ," +
                                                           "'" + computadora.descripcion + "' ," +
                                                            "'" + computadora.precio + "' ," +
@@ -46,7 +46,7 @@ namespace ComputadoraDAL
         }
         public void EditarCompDal(Computadora p)
         {
-            string consulta = $"update computadora set nombre= '{p.nombre.ToString()}', descripcion= '{p.descripcion.ToString()}', precio='{p.precio}', fechafabricacion='{p.fechafabricacion.ToString()}' where idcomputadora='{p.idcomputadora}'";
+            string consulta = $"update computadora set nombre= '{p.nombre.ToString()}', descripcion= '{p.descripcion.ToString()}', precio={p.precio}, fechafabricacion='{p.fechafabricacion.ToString()}' where idcomputadora='{p.idcomputadora}'";
             conexion.Ejecutar(consulta);
         }
         public void EliminarCompDal(int id)

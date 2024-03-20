@@ -34,5 +34,19 @@ namespace ComputadoraVistas.ComputadoraVista
             textBox3.Text = Convert.ToString(comp.precio);
             dateTimePicker1.Value = comp.fechafabricacion;
         }
+        ComputadoraBSS.ComputadoraBss bss = new ComputadoraBSS.ComputadoraBss();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Computadora p = new Computadora();
+            var x = textBox3.Text;
+            p.idcomputadora = idx;
+            p.nombre = textBox1.Text;
+            p.descripcion = textBox2.Text;
+            p.precio = Convert.ToDecimal(textBox3.Text);
+            p.fechafabricacion = dateTimePicker1.Value;
+            bss.EditarComputadoraBss(p);
+
+            MessageBox.Show("Registro Exitoso!");
+        }
     }
 }

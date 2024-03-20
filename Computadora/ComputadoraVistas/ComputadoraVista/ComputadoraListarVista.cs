@@ -64,5 +64,16 @@ namespace ComputadoraVistas.ComputadoraVista
                 dataGridView1.DataSource = bss.ListarComputadorasBss();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int IdComputadoraSelecciionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            ComputadoraEditarvista fr = new ComputadoraEditarvista(IdComputadoraSelecciionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarComputadorasBss();
+            }
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace ComputadoraVistas.ComputadoraVista
             p.fechafabricacion = dateTimePicker1.Value;
             bss.InsertarComputadoraBss(p);
 
-            MessageBox.Show("Registro Exitoso!");
+            MessageBox.Show("Registro Actualizado!");
         }
     }
 }
